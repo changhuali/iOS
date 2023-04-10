@@ -64,7 +64,7 @@
                                             <constraint firstAttribute="height" constant="48" id="DRV-N0-ZeE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1z-8y-kFb">
                                         <rect key="frame" x="24" y="196" width="345" height="48"/>
@@ -76,20 +76,39 @@
                                         <state key="normal" title="登录">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="tinted" title="登录" titleAlignment="center">
-                                            <backgroundConfiguration key="background"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="登录" titleAlignment="center">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                             <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="baseBackgroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soC-8S-Wk5">
+                                        <rect key="frame" x="246" y="120" width="111" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="xgR-Hb-RHT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="获取验证码">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                            <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="soC-8S-Wk5" firstAttribute="bottom" secondItem="Kfd-sh-b2j" secondAttribute="bottom" constant="-8" id="0gb-Vu-Qcz"/>
+                                    <constraint firstItem="soC-8S-Wk5" firstAttribute="trailing" secondItem="Kfd-sh-b2j" secondAttribute="trailing" constant="-12" id="0pD-TR-alm"/>
+                                    <constraint firstItem="soC-8S-Wk5" firstAttribute="top" secondItem="Kfd-sh-b2j" secondAttribute="top" constant="8" id="2Gx-dJ-kZ1"/>
                                     <constraint firstItem="McC-05-BZE" firstAttribute="top" secondItem="wCF-a8-WqF" secondAttribute="top" constant="48" id="AHU-D8-nDz"/>
                                     <constraint firstAttribute="trailing" secondItem="A1z-8y-kFb" secondAttribute="trailing" constant="24" id="Gnc-Fk-0cG"/>
                                     <constraint firstItem="McC-05-BZE" firstAttribute="leading" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="24" id="IKT-lY-9pU"/>
                                     <constraint firstAttribute="bottom" secondItem="A1z-8y-kFb" secondAttribute="bottom" constant="36" id="Mh2-O4-KX4"/>
+                                    <constraint firstItem="soC-8S-Wk5" firstAttribute="centerY" secondItem="Kfd-sh-b2j" secondAttribute="centerY" id="MzB-7v-WrH"/>
                                     <constraint firstItem="Kfd-sh-b2j" firstAttribute="top" secondItem="McC-05-BZE" secondAttribute="bottom" constant="16" id="OWz-zF-SDV"/>
                                     <constraint firstAttribute="trailing" secondItem="Kfd-sh-b2j" secondAttribute="trailing" constant="24" id="RK5-mV-jQs"/>
                                     <constraint firstItem="A1z-8y-kFb" firstAttribute="leading" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="24" id="UNQ-ge-snk"/>
@@ -112,8 +131,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="codeBtn" destination="soC-8S-Wk5" id="Tyy-0Q-FXv"/>
+                        <outlet property="codeInput" destination="Kfd-sh-b2j" id="prl-8f-zY2"/>
                         <outlet property="formView" destination="wCF-a8-WqF" id="TIe-7X-4z6"/>
                         <outlet property="headerView" destination="QUv-BX-w0s" id="P8w-Pf-2N6"/>
+                        <outlet property="phoneInput" destination="McC-05-BZE" id="wOc-Sq-9h4"/>
+                        <outlet property="submitBtn" destination="A1z-8y-kFb" id="rEP-5h-7IH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

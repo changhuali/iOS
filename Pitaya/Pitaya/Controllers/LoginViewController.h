@@ -9,9 +9,5 @@
 
 @interface LoginViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *headerView;
-
-@property (weak, nonatomic) IBOutlet UIView *formView;
-
 @end
 

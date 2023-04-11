@@ -56,7 +56,7 @@
                                             <constraint firstAttribute="height" constant="48" id="OU6-DK-Rqt"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-sh-b2j">
                                         <rect key="frame" x="24" y="112" width="345" height="48"/>
@@ -66,37 +66,28 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1z-8y-kFb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1z-8y-kFb">
                                         <rect key="frame" x="24" y="196" width="345" height="48"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="2IL-e0-V68"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="登录">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soC-8S-Wk5">
+                                        <rect key="frame" x="246" y="120" width="111" height="32"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="xgR-Hb-RHT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="获取验证码">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="plain" title="登录" titleAlignment="center">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" name="AccentColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                            <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soC-8S-Wk5">
-                                        <rect key="frame" x="246" y="120" width="111" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="111" id="xgR-Hb-RHT"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="获取验证码">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" name="AccentColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                            <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,6 +105,7 @@
                                     <constraint firstItem="A1z-8y-kFb" firstAttribute="leading" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="24" id="UNQ-ge-snk"/>
                                     <constraint firstItem="A1z-8y-kFb" firstAttribute="top" secondItem="Kfd-sh-b2j" secondAttribute="bottom" constant="36" id="Vgu-Sg-Yhz"/>
                                     <constraint firstItem="Kfd-sh-b2j" firstAttribute="leading" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="24" id="fFi-BA-bPr"/>
+                                    <constraint firstItem="soC-8S-Wk5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="20" symbolic="YES" id="fg4-Bq-DhW"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="xVc-6c-V8e"/>
                                     <constraint firstAttribute="trailing" secondItem="McC-05-BZE" secondAttribute="trailing" constant="24" id="yKh-Dk-omW"/>
                                 </constraints>

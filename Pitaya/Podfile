@@ -10,6 +10,7 @@ target 'Pitaya' do
   # Pods for Pitaya
   pod 'SnapKit'
   pod 'Masonry'
+  pod 'IQKeyboardManager'
 
   target 'PitayaTests' do
     inherit! :search_paths

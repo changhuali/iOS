@@ -58,7 +58,7 @@ static NSTimeInterval CQToastDefaultFadeDuration;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //========== 设置初始值 ==========//
-        CQToastInitialBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.9];
+        CQToastInitialBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.75];
         CQToastInitialTextColor       = [UIColor whiteColor];
         CQToastInitialDuration     = 2;
         CQToastInitialFadeDuration = 0.3;

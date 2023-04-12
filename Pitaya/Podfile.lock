@@ -1,20 +1,24 @@
 PODS:
+  - IQKeyboardManager (6.5.11)
   - Masonry (1.1.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - Masonry
   - SnapKit
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManager
     - Masonry
     - SnapKit
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 6cc227c1caa2dc96f86237831a5c0a279b931d5a
+PODFILE CHECKSUM: 1e33287c8f1d2108ad3de0047c64375e113234fb
 
 COCOAPODS: 1.12.0

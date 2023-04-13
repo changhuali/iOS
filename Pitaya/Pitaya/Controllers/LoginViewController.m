@@ -86,7 +86,9 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [weakSelf.codeBtn setAlpha:0.6];
     });
-    [self countDownFrom:60 to:0 onChange:^(int current) {
+    int maximumTime = 60;
+    [weakSelf.codeBtn setTitle:[NSString stringWithFormat:@"%ds", maximumTime] forState:UIControlStateNormal];
+    [self countDownFrom:maximumTime to:0 onChange:^(int current) {
         [weakSelf.codeBtn setTitle:[NSString stringWithFormat:@"%ds", current] forState:UIControlStateNormal];
     } done:^{
         [weakSelf.codeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
@@ -118,7 +120,7 @@
 
     UIViewController *homeVC = [HomeViewController new];
     homeVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    homeVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    homeVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:homeVC animated:YES completion:nil];
 }
 
@@ -170,6 +172,7 @@
 }
 
 -(void)dealloc {
+    NSLog(@"%@ %@", NSStringFromClass(self.class), NSStringFromSelector(_cmd));
     if (self.timer) {
         dispatch_source_cancel(self.timer);
         self.timer = nil;

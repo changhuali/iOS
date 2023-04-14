@@ -22,6 +22,7 @@
 		85ADDBA429DFEE2700D16A0E /* PitayaUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADDBA329DFEE2700D16A0E /* PitayaUITestsLaunchTests.m */; };
 		85C72D2429E554C4006B9A47 /* CQToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C72D2329E554C4006B9A47 /* CQToast.m */; };
 		85C72D2729E55926006B9A47 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C72D2629E55926006B9A47 /* HomeViewController.m */; };
+		85D8938B29E92B9E000DCC91 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D8938A29E92B9E000DCC91 /* RootNavigationController.m */; };
 		D784E854F89AFB8F4D16D319 /* Pods_Pitaya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FE50A6C8F994E86E903614 /* Pods_Pitaya.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		85C72D2329E554C4006B9A47 /* CQToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQToast.m; sourceTree = "<group>"; };
 		85C72D2529E55926006B9A47 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		85C72D2629E55926006B9A47 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		85D8938929E92B9E000DCC91 /* RootNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		85D8938A29E92B9E000DCC91 /* RootNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		AE7BA11AC16819920DA63BF5 /* Pods_PitayaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitayaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC05A041799B34A69A22EFB9 /* Pods-Pitaya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pitaya.release.xcconfig"; path = "Target Support Files/Pods-Pitaya/Pods-Pitaya.release.xcconfig"; sourceTree = "<group>"; };
 		F03D2CC82ED3E6620BA7D178 /* Pods-PitayaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitayaTests.release.xcconfig"; path = "Target Support Files/Pods-PitayaTests/Pods-PitayaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				85ADDB8229DFEE2500D16A0E /* LoginViewController.m */,
 				85C72D2529E55926006B9A47 /* HomeViewController.h */,
 				85C72D2629E55926006B9A47 /* HomeViewController.m */,
+				85D8938929E92B9E000DCC91 /* RootNavigationController.h */,
+				85D8938A29E92B9E000DCC91 /* RootNavigationController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				85006C5129E4EFAB007283E7 /* NSString+Validate.m in Sources */,
 				85ADDB7D29DFEE2500D16A0E /* AppDelegate.m in Sources */,
 				85ADDB8E29DFEE2700D16A0E /* main.m in Sources */,
+				85D8938B29E92B9E000DCC91 /* RootNavigationController.m in Sources */,
 				85C72D2729E55926006B9A47 /* HomeViewController.m in Sources */,
 				85ADDB8029DFEE2500D16A0E /* SceneDelegate.m in Sources */,
 			);

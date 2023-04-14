@@ -9,6 +9,7 @@
 #import "NSString+Validate.h"
 #import "CQToast.h"
 #import "HomeViewController.h"
+#import <Masonry.h>
 
 
 @interface LoginViewController ()
@@ -31,6 +32,7 @@
     [super viewDidLoad];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    self.title = @"LOGIN";
     
     //MARK: setup bg of header
     UIImage *headerBg = [UIImage imageNamed:@"BgLogin"];
@@ -61,13 +63,25 @@
     [_submitBtn addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew context:nil];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 //MARK: VC setup
-- (UIStatusBarStyle)preferredStatusBarStyle {
+-(UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations  {
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations  {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+-(BOOL)prefersStatusBarHidden {
+    return NO;
 }
 
 //MARK: TextFieldDelegate
@@ -119,9 +133,9 @@
     }
 
     UIViewController *homeVC = [HomeViewController new];
-    homeVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    homeVC.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:homeVC animated:YES completion:nil];
+    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.backBarButtonItem = barBtn;
+    [self.navigationController pushViewController:homeVC animated:YES];
 }
 
 //MARK: observers

@@ -8,7 +8,10 @@
 #import "LoginViewController.h"
 #import "NSString+Validate.h"
 #import "CQToast.h"
+#import "MainTabBarController.h"
 #import "HomeViewController.h"
+#import "UserViewController.h"
+#import "RootNavigationController.h"
 #import <Masonry.h>
 
 
@@ -30,9 +33,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(applicationWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
-    self.title = @"LOGIN";
+//    self.title = @"LOGIN";
     
     //MARK: setup bg of header
     UIImage *headerBg = [UIImage imageNamed:@"BgLogin"];
@@ -61,14 +65,6 @@
     _submitBtn.layer.cornerRadius = 4;
     _submitBtn.layer.masksToBounds = YES;
     [_submitBtn addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew context:nil];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
--(void)viewWillDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 //MARK: VC setup
@@ -113,29 +109,41 @@
 }
 
 -(void)handleSubmitBtnClick {
-    NSString *phone = _phoneInput.text;
-    NSString *code = _codeInput.text;
-    if (phone.length == 0) {
-        [CQToast showWithMessage:@"请输入手机号"];
-        return;
-    }
-    if (![phone cus_isPhone]) {
-        [CQToast showWithMessage:@"手机号格式异常"];
-        return;
-    }
-    if (code.length == 0) {
-        [CQToast showWithMessage:@"请输入验证码"];
-        return;
-    }
-    if (![code cus_isCode]) {
-        [CQToast showWithMessage:@"验证码格式异常"];
-        return;
-    }
+//    NSString *phone = _phoneInput.text;
+//    NSString *code = _codeInput.text;
+//    if (phone.length == 0) {
+//        [CQToast showWithMessage:@"请输入手机号"];
+//        return;
+//    }
+//    if (![phone cus_isPhone]) {
+//        [CQToast showWithMessage:@"手机号格式异常"];
+//        return;
+//    }
+//    if (code.length == 0) {
+//        [CQToast showWithMessage:@"请输入验证码"];
+//        return;
+//    }
+//    if (![code cus_isCode]) {
+//        [CQToast showWithMessage:@"验证码格式异常"];
+//        return;
+//    }
 
-    UIViewController *homeVC = [HomeViewController new];
-    UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
-    self.navigationItem.backBarButtonItem = barBtn;
-    [self.navigationController pushViewController:homeVC animated:YES];
+    MainTabBarController *tabBarVC = [MainTabBarController new];
+    
+    HomeViewController *homeVC = [HomeViewController new];
+    RootNavigationController *homeNavVC = [[RootNavigationController alloc] initWithRootViewController:homeVC];
+    homeNavVC.tabBarItem.title = @"首页";
+    homeNavVC.tabBarItem.image = [UIImage imageNamed:@"TabbarHome"];
+    [tabBarVC addChildViewController:homeNavVC];
+    
+    UserViewController *userVC = [UserViewController new];
+    RootNavigationController *userNavVC = [[RootNavigationController alloc] initWithRootViewController:userVC];
+    userNavVC.tabBarItem.title = @"我的";
+    userNavVC.tabBarItem.image = [UIImage imageNamed:@"TabbarUser"];
+    [tabBarVC addChildViewController:userNavVC];
+
+    tabBarVC.selectedIndex = 0;
+    [self.navigationController setViewControllers:[NSArray arrayWithObject:tabBarVC] animated:YES];
 }
 
 //MARK: observers

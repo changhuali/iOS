@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     IQKeyboardManager.sharedManager.enable = true;
+    [[UINavigationBar appearance] setTranslucent:YES];
     return YES;
 }
 

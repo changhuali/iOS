@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  UserViewController.h
 //  Pitaya
 //
 //  Created by hjmac04 on 2023/4/16.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : UIViewController
+@interface UserViewController : UIViewController
 
 @end
 

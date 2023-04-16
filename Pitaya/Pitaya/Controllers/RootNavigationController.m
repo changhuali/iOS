@@ -15,16 +15,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationBar.delegate = self;
     
     // setup navigationBar
-    self.navigationBar.translucent = NO;
     UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-    appearance.backgroundColor = [UIColor whiteColor];
+    appearance.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
+    appearance.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     self.navigationBar.scrollEdgeAppearance = appearance;
     self.navigationBar.standardAppearance = appearance;
-    
-    // Do any additional setup after loading the view.
 }
 
 -(UIViewController *)childViewControllerForStatusBarStyle {

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RootNavigationController : UINavigationController<UINavigationBarDelegate>
+@interface RootNavigationController : UINavigationController
 
 @end
 

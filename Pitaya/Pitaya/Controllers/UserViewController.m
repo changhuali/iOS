@@ -1,17 +1,17 @@
 //
-//  HomeViewController.m
+//  UserViewController.m
 //  Pitaya
 //
 //  Created by hjmac04 on 2023/4/16.
 //
 
-#import "HomeViewController.h"
+#import "UserViewController.h"
 
-@interface HomeViewController ()
+@interface UserViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation UserViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

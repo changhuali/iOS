@@ -18,8 +18,8 @@
     
     // setup navigationBar
     UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-    appearance.backgroundColor = [UIColor colorWithWhite:1 alpha:0.75];
-    appearance.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    appearance.backgroundColor = [UIColor colorWithWhite:1 alpha:0.25];
+    appearance.backgroundEffect = nil;
     self.navigationBar.scrollEdgeAppearance = appearance;
     self.navigationBar.standardAppearance = appearance;
 }

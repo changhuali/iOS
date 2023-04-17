@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUv-BX-w0s">
@@ -106,7 +106,7 @@
                                     <constraint firstItem="A1z-8y-kFb" firstAttribute="top" secondItem="Kfd-sh-b2j" secondAttribute="bottom" constant="36" id="Vgu-Sg-Yhz"/>
                                     <constraint firstItem="Kfd-sh-b2j" firstAttribute="leading" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="24" id="fFi-BA-bPr"/>
                                     <constraint firstItem="soC-8S-Wk5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wCF-a8-WqF" secondAttribute="leading" constant="20" symbolic="YES" id="fg4-Bq-DhW"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="xVc-6c-V8e"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="xVc-6c-V8e"/>
                                     <constraint firstAttribute="trailing" secondItem="McC-05-BZE" secondAttribute="trailing" constant="24" id="yKh-Dk-omW"/>
                                 </constraints>
                             </view>
@@ -141,7 +141,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f8a-2c-0II" customClass="RootNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vws-Wl-lrQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vws-Wl-lrQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

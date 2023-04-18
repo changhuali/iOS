@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserViewController : UIViewController
+@interface UserViewController : UIViewController<UIScrollViewDelegate>
 
 @end
 

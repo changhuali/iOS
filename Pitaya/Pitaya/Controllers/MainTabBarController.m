@@ -23,7 +23,7 @@
     [apperance configureWithTransparentBackground];
 //    [apperance configureWithTransparentBackground];
 //    apperance.backgroundImage = nil;
-//    apperance.shadowColor = [UIColor redColor];
+    apperance.shadowColor = [UIColor grayColor];
 //    apperance.backgroundEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     self.tabBar.standardAppearance = apperance;
     if (@available(iOS 15, *)) {

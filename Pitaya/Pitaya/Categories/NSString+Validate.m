@@ -9,13 +9,13 @@
 
 @implementation NSString (Validate)
 
--(BOOL)cus_isPhone {
+- (BOOL)cus_isPhone {
     NSString *pat = @"^1\\d{10}$";
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pat];
     return [pre evaluateWithObject:self];
 }
 
--(BOOL)cus_isCode {
+- (BOOL)cus_isCode {
     NSString *pat = @"^\\d{6}$";
     NSRegularExpression *exp = [NSRegularExpression regularExpressionWithPattern:pat options:0 error:nil];
     NSArray *result = [exp matchesInString:self options:0 range:NSMakeRange(0, self.length)];

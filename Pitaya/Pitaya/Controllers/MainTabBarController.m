@@ -6,12 +6,33 @@
 //
 
 #import "MainTabBarController.h"
+#import "HomeViewController.h"
+#import "UserViewController.h"
+#import "RootNavigationController.h"
 
 @interface MainTabBarController ()
 
 @end
 
 @implementation MainTabBarController
+
++ (instancetype)initControllers {
+    MainTabBarController *tabBarVC = [[self alloc] init];
+    
+    HomeViewController *homeVC = [HomeViewController new];
+    RootNavigationController *homeNavVC = [[RootNavigationController alloc] initWithRootViewController:homeVC];
+    homeNavVC.tabBarItem.title = @"首页";
+    homeNavVC.tabBarItem.image = [UIImage imageNamed:@"TabbarHome"];
+    [tabBarVC addChildViewController:homeNavVC];
+    
+    UserViewController *userVC = [UserViewController new];
+    RootNavigationController *userNavVC = [[RootNavigationController alloc] initWithRootViewController:userVC];
+    userNavVC.tabBarItem.title = @"我的";
+    userNavVC.tabBarItem.image = [UIImage imageNamed:@"TabbarUser"];
+    [tabBarVC addChildViewController:userNavVC];
+    
+    return tabBarVC;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

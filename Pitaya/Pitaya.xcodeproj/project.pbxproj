@@ -22,6 +22,9 @@
 		85ADDBA429DFEE2700D16A0E /* PitayaUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADDBA329DFEE2700D16A0E /* PitayaUITestsLaunchTests.m */; };
 		85C72D2429E554C4006B9A47 /* CQToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C72D2329E554C4006B9A47 /* CQToast.m */; };
 		85C72D2729E55926006B9A47 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C72D2629E55926006B9A47 /* MainTabBarController.m */; };
+		85C92BD029F7C9C4004727D8 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C92BCF29F7C9C4004727D8 /* DemoViewController.m */; };
+		85C92BD429F7D328004727D8 /* DemoCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C92BD329F7D328004727D8 /* DemoCellData.m */; };
+		85C92BD729F7D353004727D8 /* DemoSectionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C92BD629F7D353004727D8 /* DemoSectionData.m */; };
 		85D8938B29E92B9E000DCC91 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D8938A29E92B9E000DCC91 /* RootNavigationController.m */; };
 		85D8938E29EE8F43000DCC91 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D8938D29EE8F43000DCC91 /* HomeViewController.m */; };
 		85D8939129EE8F89000DCC91 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D8939029EE8F89000DCC91 /* UserViewController.m */; };
@@ -74,6 +77,12 @@
 		85C72D2329E554C4006B9A47 /* CQToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CQToast.m; sourceTree = "<group>"; };
 		85C72D2529E55926006B9A47 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		85C72D2629E55926006B9A47 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		85C92BCE29F7C9C4004727D8 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		85C92BCF29F7C9C4004727D8 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		85C92BD229F7D328004727D8 /* DemoCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCellData.h; sourceTree = "<group>"; };
+		85C92BD329F7D328004727D8 /* DemoCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCellData.m; sourceTree = "<group>"; };
+		85C92BD529F7D353004727D8 /* DemoSectionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSectionData.h; sourceTree = "<group>"; };
+		85C92BD629F7D353004727D8 /* DemoSectionData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSectionData.m; sourceTree = "<group>"; };
 		85D8938929E92B9E000DCC91 /* RootNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		85D8938A29E92B9E000DCC91 /* RootNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		85D8938C29EE8F43000DCC91 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -114,13 +123,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85006C4E29E4EF06007283E7 /* Utilities */ = {
+		85006C4E29E4EF06007283E7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				85006C4F29E4EFAB007283E7 /* NSString+Validate.h */,
 				85006C5029E4EFAB007283E7 /* NSString+Validate.m */,
 			);
-			path = Utilities;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		855C0B4029DFFA80009386B0 /* Controllers */ = {
@@ -136,6 +145,8 @@
 				85D8938D29EE8F43000DCC91 /* HomeViewController.m */,
 				85D8938F29EE8F89000DCC91 /* UserViewController.h */,
 				85D8939029EE8F89000DCC91 /* UserViewController.m */,
+				85C92BCE29F7C9C4004727D8 /* DemoViewController.h */,
+				85C92BCF29F7C9C4004727D8 /* DemoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,16 +185,13 @@
 		85ADDB7A29DFEE2500D16A0E /* Pitaya */ = {
 			isa = PBXGroup;
 			children = (
-				85006C4E29E4EF06007283E7 /* Utilities */,
+				85C92BD929F8D25E004727D8 /* Storyboards */,
+				85C92BD829F8D243004727D8 /* Application */,
+				85C92BD129F7D281004727D8 /* Models */,
+				85006C4E29E4EF06007283E7 /* Categories */,
 				855C0B4129DFFA8F009386B0 /* Views */,
 				855C0B4029DFFA80009386B0 /* Controllers */,
-				85ADDB7B29DFEE2500D16A0E /* AppDelegate.h */,
-				85ADDB7C29DFEE2500D16A0E /* AppDelegate.m */,
-				85ADDB7E29DFEE2500D16A0E /* SceneDelegate.h */,
-				85ADDB7F29DFEE2500D16A0E /* SceneDelegate.m */,
-				85ADDB8429DFEE2500D16A0E /* Main.storyboard */,
 				85ADDB8729DFEE2700D16A0E /* Assets.xcassets */,
-				85ADDB8929DFEE2700D16A0E /* LaunchScreen.storyboard */,
 				85ADDB8C29DFEE2700D16A0E /* Info.plist */,
 				85ADDB8D29DFEE2700D16A0E /* main.m */,
 			);
@@ -205,6 +213,37 @@
 				85ADDBA329DFEE2700D16A0E /* PitayaUITestsLaunchTests.m */,
 			);
 			path = PitayaUITests;
+			sourceTree = "<group>";
+		};
+		85C92BD129F7D281004727D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85C92BD229F7D328004727D8 /* DemoCellData.h */,
+				85C92BD329F7D328004727D8 /* DemoCellData.m */,
+				85C92BD529F7D353004727D8 /* DemoSectionData.h */,
+				85C92BD629F7D353004727D8 /* DemoSectionData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85C92BD829F8D243004727D8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				85ADDB7B29DFEE2500D16A0E /* AppDelegate.h */,
+				85ADDB7C29DFEE2500D16A0E /* AppDelegate.m */,
+				85ADDB7E29DFEE2500D16A0E /* SceneDelegate.h */,
+				85ADDB7F29DFEE2500D16A0E /* SceneDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		85C92BD929F8D25E004727D8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85ADDB8429DFEE2500D16A0E /* Main.storyboard */,
+				85ADDB8929DFEE2700D16A0E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		CBD9568515AB18C939DB2626 /* Frameworks */ = {
@@ -468,10 +507,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C92BD029F7C9C4004727D8 /* DemoViewController.m in Sources */,
+				85C92BD729F7D353004727D8 /* DemoSectionData.m in Sources */,
 				85ADDB8329DFEE2500D16A0E /* LoginViewController.m in Sources */,
 				85D8939129EE8F89000DCC91 /* UserViewController.m in Sources */,
 				85C72D2429E554C4006B9A47 /* CQToast.m in Sources */,
 				85006C5129E4EFAB007283E7 /* NSString+Validate.m in Sources */,
+				85C92BD429F7D328004727D8 /* DemoCellData.m in Sources */,
 				85ADDB7D29DFEE2500D16A0E /* AppDelegate.m in Sources */,
 				85ADDB8E29DFEE2700D16A0E /* main.m in Sources */,
 				85D8938E29EE8F43000DCC91 /* HomeViewController.m in Sources */,

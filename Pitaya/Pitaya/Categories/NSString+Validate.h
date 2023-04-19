@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Validate)
 
--(BOOL)cus_isPhone;
--(BOOL)cus_isCode;
+- (BOOL)cus_isPhone;
+- (BOOL)cus_isCode;
 
 @end
 

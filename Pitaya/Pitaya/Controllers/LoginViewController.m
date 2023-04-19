@@ -8,11 +8,8 @@
 #import "LoginViewController.h"
 #import "NSString+Validate.h"
 #import "CQToast.h"
-#import "MainTabBarController.h"
-#import "HomeViewController.h"
-#import "UserViewController.h"
-#import "RootNavigationController.h"
 #import <Masonry.h>
+#import "DemoViewController.h"
 
 
 @interface LoginViewController ()
@@ -128,22 +125,7 @@
 //        return;
 //    }
 
-    MainTabBarController *tabBarVC = [MainTabBarController new];
-    
-    HomeViewController *homeVC = [HomeViewController new];
-    RootNavigationController *homeNavVC = [[RootNavigationController alloc] initWithRootViewController:homeVC];
-    homeNavVC.tabBarItem.title = @"首页";
-    homeNavVC.tabBarItem.image = [UIImage imageNamed:@"TabbarHome"];
-    [tabBarVC addChildViewController:homeNavVC];
-    
-    UserViewController *userVC = [UserViewController new];
-    RootNavigationController *userNavVC = [[RootNavigationController alloc] initWithRootViewController:userVC];
-    userNavVC.tabBarItem.title = @"我的";
-    userNavVC.tabBarItem.image = [UIImage imageNamed:@"TabbarUser"];
-    [tabBarVC addChildViewController:userNavVC];
-
-    tabBarVC.selectedIndex = 0;
-    [self.navigationController setViewControllers:[NSArray arrayWithObject:tabBarVC] animated:YES];
+    [self.navigationController setViewControllers:[NSArray arrayWithObject:[DemoViewController new]] animated:YES];
 }
 
 //MARK: observers

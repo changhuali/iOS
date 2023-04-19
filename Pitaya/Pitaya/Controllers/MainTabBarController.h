@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainTabBarController : UITabBarController
 
++ (instancetype)initControllers;
+
 @end
 
 NS_ASSUME_NONNULL_END
